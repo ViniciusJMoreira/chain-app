@@ -40,7 +40,7 @@
       </div>
     </div>
   </header>
-  <section id="section-1" class="section section__services">
+  <section id="services" class="section section__services">
     <div class="section__header">
       <h2 class="section__title">Amazing <span>Services & Features</span> for you</h2>
       <img src="images/heading-line-dec.png" alt="header line" class="header__line-img">
@@ -99,7 +99,7 @@
       </div>
     </div>
   </section>
-  <section id="section-2" class="section section__about">
+  <section id="about" class="section section__about">
     <div class="section__header">
       <h2 class="section__title">About <span>What We Do</span> & Who We Are</h2>
       <img src="images/heading-line-dec.png" alt="header line" class="header__line-img">
@@ -135,7 +135,7 @@
       </div>
     </div>
   </section>
-  <section id="section-3" class="section section__reviews">
+  <section id="reviews" class="section section__reviews">
     <div class="section__header">
       <h2 class="section__title">Check What <span>The Clients Say</span> About Our App Dev</h2>
       <img src="images/heading-line-dec.png" alt="header line" class="header__line-img">
@@ -236,7 +236,7 @@
       </div>
     </div>
   </section>
-  <section id="section-4" class="section section__plans">
+  <section id="pricing" class="section section__plans">
     <div class="section__header">
       <h2 class="section__title">We Have The <span>Best Pre-Order Prices</span> You Can Get</h2>
       <img src="images/heading-line-dec.png" alt="header line" class="header__line-img">
@@ -284,30 +284,38 @@
     </div>
   </section>
   <footer class="footer">
-    <div class="newsletter__header">
-      <h2 class="newsletter__title">Join our mailing list to receive the news & latest trends</h2>
-    </div>
-    <div class="newsletter__subscribe">
-      <input type="email" name="user-email" id="user-email" placeholder="Email Address">
-      <button type="button" class="btn btn__subscribe">Subscribe Now</button>
-    </div>
+    <section id="newsletter" class="section section__newsletter">
+      <div class="newsletter__header">
+        <h2 class="newsletter__title">Join our mailing list to receive the news & latest trends</h2>
+      </div>
+      <div class="newsletter__subscribe">
+        <input type="email" name="user-email" id="user-email" placeholder="Email Address">
+        <button type="button" class="btn btn__subscribe">Subscribe Now</button>
+      </div>
+    </section>
     <div class="footer__menu-links">
-      <h3>Contact Us</h3>
       <menu class="footer__contact-links">
+        <li>
+          <h3>Contact Us</h3>
+        </li>
         <li><a href="#" rel="noopener noreferrer"><address>0000 Fictional Ave - Imaginary City, FA</address></a></li>
         <li><a href="tel:+00-0000-0000" rel="noopener noreferrer">(00)00-0000-0000</a></li>
         <li><a href="mailto:email@email.com" rel="noopener noreferrer">chainapp@support.com</a></li>
       </menu>
-      <h3>About Us</h3>
       <menu class="footer__about-links">
+        <li>
+          <h3>About Us</h3>
+        </li>
         <li><a target="_self" href="#header" class="active">Home</a></li>
         <li><a target="_self" href="#services">Services</a></li>
         <li><a target="_self" href="#about">About</a></li>
         <li><a target="_self" href="#reviews">Reviews</a></li>
         <li><a target="_self" href="#pricing">Pricing</a></li>
       </menu>
-      <h3>Userful Links</h3>
       <menu class="footer__useful-links">
+        <li>
+          <h3>Userful Links</h3>
+        </li>
         <li><a href="#" target="_top" rel="noopener noreferrer">Free Apps</a></li>
         <li><a href="#" target="_top" rel="noopener noreferrer">App Engine</a></li>
         <li><a href="#" target="_top" rel="noopener noreferrer">Programming</a></li>
@@ -317,11 +325,15 @@
         <li><a href="#" target="_top" rel="noopener noreferrer">Digital Web</a></li>
         <li><a href="#" target="_top" rel="noopener noreferrer">Challeng Page</a></li>
       </menu>
-      <h3>About Our Company</h3>
-      <div class="footer__about-company">
-        <img src="images/white-logo.png" alt="Logo chain app" class="logo__chain-app">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-      </div>
+      <menu class="footer__about-links">
+        <li>
+          <h3>About Our Company</h3>
+        </li>
+        <li><img src="images/white-logo.png" alt="Logo chain app" class="logo__chain-app"></li>
+        <li>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </li>
+      </menu>
     </div>
     <p class="footer__copyright">
       Copyright &copy; 2022 Chain App Dev Company. All Rights Reserved. <br>
