@@ -7,12 +7,13 @@
   <link rel="shortcut icon" href="images/logo-favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="./css/media__queries.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <script src="js/index.js" defer></script>
 </head>
 <body>
   <header class="header" id="header">
-    <nav class="header__nav">
+    <nav class="header__nav width__control">
       <img src="images/logo.png" alt="Logo chain app" class="logo__chain-app">
       <menu class="nav__menu">
         <li class="nav__link"><a href="#header" class="active">Home</a></li>
@@ -24,7 +25,7 @@
       </menu>
       <div class="nav__menu-mobile"><span></span></div>
     </nav>
-    <div class="header__content">
+    <div class="header__content width__control">
       <div class="header__content-title">
         <h1 class="header__title">Get The Latest App From App Stores</h1>
         <p class="header__description">
@@ -41,14 +42,14 @@
     </div>
   </header>
   <section id="services" class="section section__services">
-    <div class="section__header">
+    <div class="section__header width__control">
       <h2 class="section__title">Amazing <span>Services & Features</span> for you</h2>
       <img src="images/heading-line-dec.png" alt="header line" class="header__line-img">
       <p class="section__description">
         If you need the greatest collection of HTML templates for your business, please visit TooCSS Blog. If you need to have a contact form PHP script, go to our contact page for more information.
       </p>
     </div>
-    <div class="section__services-card">
+    <div class="section__services-card width__control">
       <div class="services__card">
         <div class="card__icon">
           <img src="images/service-icon-01.png" alt="Maintenance Icon">
@@ -100,14 +101,14 @@
     </div>
   </section>
   <section id="about" class="section section__about">
-    <div class="section__header">
+    <div class="section__header width__control">
       <h2 class="section__title">About <span>What We Do</span> & Who We Are</h2>
       <img src="images/heading-line-dec.png" alt="header line" class="header__line-img">
       <p class="section__description">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut labore et dolore magna.
       </p>
     </div>
-    <div class="section__about-content">
+    <div class="section__about-content width__control">
       <div class="section__about-menu">
         <div class="content__menu">
           <h3>Maintance Problems</h3>
@@ -136,14 +137,14 @@
     </div>
   </section>
   <section id="reviews" class="section section__reviews">
-    <div class="section__header">
+    <div class="section__header width__control">
       <h2 class="section__title">Check What <span>The Clients Say</span> About Our App Dev</h2>
       <img src="images/heading-line-dec.png" alt="header line" class="header__line-img">
       <p class="section__description">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut labore et dolore magna.
       </p>
     </div>
-    <div class="section__reviews-posts">
+    <div class="section__reviews-posts width__control">
       <menu class="section__reviews-menu">
         <li class="review__content active" data-review="1">
           <div class="review__title">
@@ -237,14 +238,14 @@
     </div>
   </section>
   <section id="pricing" class="section section__plans">
-    <div class="section__header">
+    <div class="section__header width__control">
       <h2 class="section__title">We Have The <span>Best Pre-Order Prices</span> You Can Get</h2>
       <img src="images/heading-line-dec.png" alt="header line" class="header__line-img">
       <p class="section__description">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut labore et dolore magna.
       </p>
     </div>
-    <div class="section__plans-card">
+    <div class="section__plans-card width__control">
       <div class="plan__card standard__plan-card">
         <span class="plan__price">&#36;12</span>
         <h3>Standard Plan App</h3>
@@ -284,16 +285,16 @@
     </div>
   </section>
   <footer class="footer">
-    <section id="newsletter" class="section section__newsletter">
+    <section id="newsletter" class="section section__newsletter width__control">
       <div class="newsletter__header">
-        <h2 class="newsletter__title">Join our mailing list to receive the news & latest trends</h2>
+        <h2 class="newsletter__title"><span>Join our</span> mailing list to receive the news & latest trends</h2>
       </div>
       <div class="newsletter__subscribe">
         <input type="email" name="user-email" id="user-email" placeholder="Email Address">
         <button type="button" class="btn btn__subscribe">Subscribe Now</button>
       </div>
     </section>
-    <div class="footer__menu-links">
+    <div class="footer__menu-links width__control">
       <menu class="footer__contact-links">
         <li>
           <h3>Contact Us</h3>
@@ -329,7 +330,9 @@
         <li>
           <h3>About Our Company</h3>
         </li>
-        <li><img src="images/white-logo.png" alt="Logo chain app" class="logo__chain-app"></li>
+        <li>
+          <img src="images/white-logo.png" alt="Logo chain app" class="logo__chain-app">
+        </li>
         <li>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
         </li>

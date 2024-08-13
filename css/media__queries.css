@@ -1,0 +1,14 @@
+@media (width >= 576px) {
+  .section__reviews-menu {
+    width: 100%;
+  }
+  .review__content {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 3.5rem;
+  }
+  .review__rate span {
+    display: block;
+    text-align: center;
+  }
+}
