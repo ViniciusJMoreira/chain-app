@@ -303,7 +303,8 @@ a {
   row-gap: 2.5rem;
 }
 .plan__card {
-  height: 65rem;
+  width: 100%;
+  height: 58rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -316,6 +317,9 @@ a {
   overflow: hidden;
   padding-inline: 2rem;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+}
+.business__plan-card {
+  height: 65rem;
 }
 .business__plan-card::before {
   position: absolute;
@@ -377,11 +381,15 @@ a {
   position: absolute;
   top: 0;
   left: 0;
+  margin-top: 2.5rem;
+  margin-left: 2.2rem;
+}
+.business__plan-card .plan__price {
   margin-top: 4rem;
   margin-left: 2.5rem;
 }
 .plan__card h3 {
-  color: #000;
+  /* color: #000; */
   z-index: 1;
   margin-top: 3rem;
 }
