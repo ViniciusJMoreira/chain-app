@@ -1,14 +1,37 @@
 @media (width >= 576px) {
-  .section__reviews-menu {
-    width: 100%;
-  }
   .review__content {
-    flex-direction: row;
-    justify-content: space-between;
-    padding-inline: 3.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 4rem;
+  }
+  .review__content h3,
+  .review__content p {
+    text-align: start;
+  }
+  .review__rate {
+    justify-self: end;
   }
   .review__rate span {
     display: block;
     text-align: center;
+  }
+}
+@media (width >= 768px) {
+  .width__control {
+    max-width: 70rem;
+  }
+  .review__content {
+    display: grid;
+    grid-template-columns: 1fr .7fr 1fr;
+    padding-inline: 4rem;
+  }
+  .review__company {
+    display: block;
+  }
+  .review__rate span {
+    display: inline-block;
+  }
+  .section__reviews-staff {
+    justify-content: start;
   }
 }
