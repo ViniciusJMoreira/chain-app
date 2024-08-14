@@ -23,6 +23,15 @@
   .width__control {
     max-width: 70rem;
   }
+  .nav__menu {
+    display: flex;
+  }
+  .nav__link:nth-child(5) {
+    margin-right: 3rem;
+  }
+  .nav__menu-mobile {
+    display: none;
+  }
   .section__services-card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

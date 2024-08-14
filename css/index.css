@@ -74,6 +74,15 @@ a {
 }
 .nav__menu {
   display: none;
+  align-items: center;
+  gap: 2rem;
+}
+.nav__menu a{
+  color: #000;
+  letter-spacing: 0.09rem;
+}
+.nav__menu .active {
+  color: #4b8ef1;
 }
 
 /* NAV MOBILE  */
@@ -381,7 +390,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   margin-left: 2.2rem;
 }
 .business__plan-card .plan__price {
