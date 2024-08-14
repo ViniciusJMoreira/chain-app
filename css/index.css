@@ -149,6 +149,8 @@ a {
   justify-content: center;
 }
 .header__image {
+  margin-inline: auto;
+  max-width: 55rem;
   width: 100%;
 }
 
