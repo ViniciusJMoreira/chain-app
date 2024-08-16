@@ -1,15 +1,14 @@
 header, section, footer {
   margin-inline: auto;
-  padding-inline: 1rem;
 }
 
 h1 {
   line-height: 5.5rem;
-  font-size: 4rem;
+  font-size: clamp(4rem, 8vw, 4.8rem);
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: clamp(3rem, 6vw, 3.4rem);
   line-height: 4rem;
 }
 
@@ -55,19 +54,20 @@ a {
 .width__control {
   max-width: 50rem;
   margin-inline: auto;
+  padding-inline: 2rem;
 }
 
 /* HEADER */
 /* NAV */
 .header__nav {
+  padding-inline: 2rem;
   padding-block: 2.5rem;
-  border-bottom: 0.05rem solid #eeeeee;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
 }
 .header__nav-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 2rem;
 }
 .logo__chain-app {
   width: 10rem;
@@ -131,8 +131,8 @@ a {
 
 /* HEADER CONTENT */
 .header__content {
-  display: grid;
-  grid-template-rows: repeat(2, auto);
+  display: flex;
+  flex-direction: column;
   row-gap: 3rem;
   padding-block: 7rem;
 }
@@ -150,13 +150,13 @@ a {
 }
 .header__image {
   margin-inline: auto;
-  max-width: 55rem;
+  max-width: 45rem;
   width: 100%;
 }
 
 /* SECTION */
 .section {
-  margin-block: 7rem;
+  margin-block: 10rem;
 }
 .section__header {
   display: flex;
@@ -174,15 +174,17 @@ a {
 }
 /* SERVICES */
 .section__services {
-  position: relative;
-  z-index: 1;
+  margin-top: 5rem;
 }
-.section__services::after {
+.section__services .section__header {
+  position: relative;
+}
+.section__services .section__header::after {
   position: absolute;
-  opacity: .5;
+  opacity: .7;
   content: "";
   width: 100%;
-  height: 100%;
+  height: 150%;
   top: -12rem;
   right: 0%;
   background-image: url("../images/services-right-dec.png");
@@ -191,9 +193,21 @@ a {
   z-index: -1;
 }
 .section__services-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   row-gap: 4rem;
+}
+.section__services-card::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 98%;
+  left: 0;
+  background-image: url("../images/services-left-dec.png");
+  background-repeat: no-repeat;
+  z-index: -1;
 }
 .services__card {
   display: flex;
@@ -214,6 +228,11 @@ a {
   color: #4b8ef1;
 }
 /* ABOUT */
+.section__about-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+}
 .section__about-content {
   display: grid;
   grid-template-rows: repeat(4, auto);
@@ -225,9 +244,10 @@ a {
   row-gap: 3rem;
 }
 .content__menu {
-  padding-block: 1rem;
+  padding: 1rem 2rem;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
   border-radius: 5rem;
+  background-color: #fff;
 }
 .section__about-content button {
   justify-self: center;
@@ -421,7 +441,7 @@ a {
 .footer {
   position: relative;
   z-index: 1;
-  padding-top: 7rem;
+  padding-block: 4rem;
 }
 .footer::after {
   position: absolute;
@@ -449,6 +469,7 @@ a {
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
+  justify-content: center;
 }
 .newsletter__subscribe input {
   font-size: 1.5rem;
@@ -485,5 +506,5 @@ a {
   margin-bottom: 1.5rem;
 }
 .footer__copyright {
-  padding-block: 2rem 4rem;
+  padding-top: 4rem;
 }

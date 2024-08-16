@@ -1,3 +1,9 @@
+@media (width >= 500px) {
+  .section__services-card::after {
+    display: none;
+  }
+}
+
 @media (width >= 576px) {
   .header__nav-content {
     padding-inline: 0rem;
@@ -27,10 +33,13 @@
     display: flex;
   }
   .nav__link:nth-child(5) {
-    margin-right: 3rem;
+    margin-right: 2.5rem;
   }
   .nav__menu-mobile {
     display: none;
+  }
+  .section__services .section__header::after {
+    right: 12rem;
   }
   .section__services-card {
     display: grid;
@@ -49,8 +58,9 @@
   }
   .review__content {
     display: grid;
-    grid-template-columns: 1fr .7fr 1fr;
+    grid-template-columns: 1fr .7fr .8fr;
     padding-inline: 4rem;
+    align-items: start;
   }
   .review__company {
     display: block;
@@ -83,27 +93,165 @@
   }
   .footer__menu-links {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: auto .5fr;
+    grid-template-rows: repeat(2, auto);
     align-items: start;
     text-align: start;
   }
-  .footer__contact-links h3 ,
-  .footer__useful-links h3 ,
-  .footer__about-links h3 {
+  .footer__menu-links h3 ,
+  .footer__about-company p {
     text-align: start;
   }
-  .footer__useful-links {
-    grid-area: 1 / 2 / 3 / 3;
-    justify-self: center;
-  }
-  .footer__about-links {
+  .footer__about-company {
+    max-width: 30rem;
     grid-area: 2 / 1 / 3 / 2;
   }
-  .footer__about-company {
+}
+
+@media (width >= 992px) {
+  .width__control {
+    max-width: 99.2rem;
+  }
+  .nav__link:nth-child(5) {
+    margin-right: 0;
+  }
+  .header__content {
+    flex-direction: row;
+  }
+  .header__content-title {
+    max-width: 60rem;
+    align-items: start;
+    justify-content: center;
+  }
+  .header__title,
+  .header__description,
+  .section__about-content .section__title,
+  .section__about-content .section__description,
+  .section__about-content > p {
+    text-align: start;
+  }
+  .section__services {
+    margin-top: 15rem;
+  }
+  .section__services .section__header::after {
+    right: 25rem;
+  }
+  .section__services-card {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 1.5rem;
+  }
+  .section__about-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+  .section__about-container::after {
+    position: absolute;
+    content: "";
+    width: 150%;
+    height: 150%;
+    top: -20rem;
+    right: 3%;
+    background-image: url("../images/about-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: auto 100%;
+    z-index: -1;
+  }
+  .section__about-content {
+    align-self: center;
+  }
+  .section__about-content .section__header {
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+  .section__about-content p {
+    margin-inline: 0;
     max-width: 50rem;
-    grid-area: 3 / 1 / 4 / 4;
-    justify-self: center;
-    text-align: center;
+  }
+  .section__about-content > button {
+    justify-self: start;
+  }
+  .section__about-image {
+    width: auto;
+    justify-self: end;
+  }
+  .section__about-image img {
+    width: auto;
+    height: 55rem;
+  }
+  .section__reviews-posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    column-gap: 4rem;
+  }
+  .section__reviews-menu {
+    align-self: start;
+    max-width: 60rem;
+    grid-area: 1 / 1 / 4 / 2;
+    row-gap: 5rem;
+  }
+  .review__content {
+    padding-inline: 0rem;
+  }
+  .section__plans-card {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 1fr;
+    gap: 1.5rem;
+  }
+  .business__plan-card {
+    grid-area: auto;
+  }
+  .newsletter__header h2 {
+    font-size: 3.9rem;
+    max-width: 70rem;
+    margin-inline: auto;
+  }
+  .newsletter__subscribe {
+    grid-template-columns: repeat(2, 35rem);
+  }
+  .footer__menu-links {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: start;
+  }
+  .footer__contact-links {
+    margin-right: 2rem;
+  }
+  .footer__about-company {
+    grid-area: auto;
+  }
+  .footer__about-company img {
+    margin-bottom: 0;
+  }
+}
+@media (width >= 1200px) {
+  .width__control {
+    max-width: 120rem;
+  }
+  .section__services .section__header::after {
+    top: -8rem;
+    right: 0;
+    background-size: cover;
+  }
+  .section__services-card {
+    gap: 2rem;
+  }
+  .section__about-image img {
+    height: 65rem;
+  }
+  .section__reviews-posts {
+    grid-template-columns: 1fr auto;
+  }
+  .section__reviews-content {
+    max-width: 45rem;
+  }
+  .section__plans-card {
+    gap: 2.5rem;
+  }
+  .footer__contact-links {
+    margin-right: 8rem;
   }
 }
