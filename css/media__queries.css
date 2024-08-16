@@ -123,6 +123,9 @@
     align-items: start;
     justify-content: center;
   }
+  .header__description {
+    max-width: 45rem;
+  }
   .header__title,
   .header__description,
   .section__about-content .section__title,
@@ -178,6 +181,7 @@
     justify-self: end;
   }
   .section__about-image img {
+    max-width: auto;
     width: auto;
     height: 55rem;
   }
@@ -230,6 +234,9 @@
 @media (width >= 1200px) {
   .width__control {
     max-width: 120rem;
+  }
+  .header__description {
+    max-width: 55rem;
   }
   .section__services .section__header::after {
     top: -8rem;
