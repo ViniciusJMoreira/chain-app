@@ -25,6 +25,7 @@ header, nav, menu, section, footer {
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 html, body {
@@ -33,6 +34,7 @@ html, body {
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 a {

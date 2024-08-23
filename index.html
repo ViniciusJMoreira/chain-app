@@ -13,35 +13,33 @@
 </head>
 <body>
   <header class="header" id="header">
-    <div class="nojo">
-      <nav class="header__nav">
-        <div class="header__nav-content width__control">
-          <img src="images/logo.png" alt="Logo chain app" class="logo__chain-app">
-          <menu class="nav__menu">
-            <li class="nav__link"><a href="#header" class="active">Home</a></li>
-            <li class="nav__link"><a href="#services">Services</a></li>
-            <li class="nav__link"><a href="#about">About</a></li>
-            <li class="nav__link"><a href="#pricing">Pricing</a></li>
-            <li class="nav__link"><a href="#newsletter">Newsletter</a></li>
-            <li class="nav__link"><button type="button" class="btn btn__nav-link"><i class="bi bi-box-arrow-in-right"></i> Sign In Now</button></li>
-          </menu>
-          <div class="nav__menu-mobile"><span></span></div>
+    <nav class="header__nav">
+      <div class="header__nav-content width__control">
+        <img src="images/logo.png" alt="Logo chain app" class="logo__chain-app">
+        <menu class="nav__menu nav__hidden-menu">
+          <li class="nav__link"><a href="#header" class="active">Home</a></li>
+          <li class="nav__link"><a href="#services">Services</a></li>
+          <li class="nav__link"><a href="#about">About</a></li>
+          <li class="nav__link"><a href="#reviews">Reviews</a></li>
+          <li class="nav__link"><a href="#pricing">Pricing</a></li>
+          <li class="nav__link"><button type="button" class="btn btn__nav-link"><i class="bi bi-box-arrow-in-right"></i> Sign In Now</button></li>
+        </menu>
+        <div class="nav__menu-mobile"><span></span></div>
+      </div>
+    </nav>
+    <div class="header__content width__control">
+      <div class="header__content-title">
+        <h1 class="header__title">Get The Latest App From App Stores</h1>
+        <p class="header__description">
+          Chain App Dev is an app landing page HTML5 template based on Bootstrap v5.1.3 CSS layout provided by TemplateMo, a great website to download free CSS templates.
+        </p>
+        <div class="header__btns-app">
+          <button type="button">Free Quote <i class="bi bi-apple"></i></button>
+          <button type="button">Free Quote <i class="bi bi-google-play"></i></button>
         </div>
-      </nav>
-      <div class="header__content width__control">
-        <div class="header__content-title">
-          <h1 class="header__title">Get The Latest App From App Stores</h1>
-          <p class="header__description">
-            Chain App Dev is an app landing page HTML5 template based on Bootstrap v5.1.3 CSS layout provided by TemplateMo, a great website to download free CSS templates.
-          </p>
-          <div class="header__btns-app">
-            <button type="button">Free Quote <i class="bi bi-apple"></i></button>
-            <button type="button">Free Quote <i class="bi bi-google-play"></i></button>
-          </div>
-        </div>
-        <div class="header__image">
-          <img src="images/slider-dec.png" alt="Fake interface app">
-        </div>
+      </div>
+      <div class="header__image">
+        <img src="images/slider-dec.png" alt="Fake interface app">
       </div>
     </div>
   </header>
@@ -54,9 +52,9 @@
       </p>
     </div>
     <div class="section__services-card width__control">
-      <div class="services__card">
+      <div class="services__card" data-card="1">
         <div class="card__icon">
-          <img src="images/service-icon-01.png" alt="Maintenance Icon">
+          <img src="images/service-icon-1.png" alt="Maintenance Icon">
         </div>
         <h3 class="card__title">
           App Maintenance
@@ -66,9 +64,9 @@
         </p>
         <a class="card__link" href="#">Read More &#8594;</a>
       </div>
-      <div class="services__card">
+      <div class="services__card" data-card="2">
         <div class="card__icon">
-          <img src="images/service-icon-02.png" alt="Rocket Icon">
+          <img src="images/service-icon-2.png" alt="Rocket Icon">
         </div>
         <h3 class="card__title">
           Rocket Speed of App
@@ -78,9 +76,9 @@
         </p>
         <a class="card__link" href="#">Read More &#8594;</a>
       </div>
-      <div class="services__card">
+      <div class="services__card" data-card="3">
         <div class="card__icon">
-          <img src="images/service-icon-03.png" alt="Network Icon">
+          <img src="images/service-icon-3.png" alt="Network Icon">
         </div>
         <h3 class="card__title">
           Multi Workflow Idea
@@ -90,9 +88,9 @@
         </p>
         <a class="card__link" href="#">Read More &#8594;</a>
       </div>
-      <div class="services__card">
+      <div class="services__card" data-card="4">
         <div class="card__icon">
-          <img src="images/service-icon-04.png" alt="Support Icon">
+          <img src="images/service-icon-4.png" alt="Support Icon">
         </div>
         <h3 class="card__title">
           24/7 Help & Support
@@ -231,7 +229,7 @@
       <div class="section__reviews-content">
         <img src="images/quote.png" alt="quote symbol">
         <div class="review__post">
-          “<span id="post__name">Martino Co, </span>Lorem ipsum dolor sit amet, consectetur adpiscing elit, sed do eismod tempor idunte ut labore et dolore magna aliqua darwin kengan lorem ipsum dolor sit amet, consectetur picing elit massive big blasta.”
+          “<span class="post__name">Martino Co</span>, Lorem ipsum dolor sit amet, consectetur adpiscing elit, sed do eismod tempor idunte ut labore et dolore magna aliqua darwin kengan lorem ipsum dolor sit amet, consectetur picing elit massive big blasta.”
         </div>
       </div>
       <div class="section__reviews-staff">
@@ -291,7 +289,7 @@
     </div>
   </section>
   <footer class="footer">
-    <section id="newsletter" class="section section__newsletter width__control">
+    <section class="section section__newsletter width__control">
       <div class="newsletter__header">
         <h2 class="newsletter__title">Join our mailing list to receive the news & latest trends</h2>
       </div>
