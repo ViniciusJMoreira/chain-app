@@ -10,12 +10,12 @@ const reviewsPosts= document.querySelector(".section__reviews-posts");
 // NAV HEADER
 const navHighlighter = function () {
   // Get current scroll position
-  let scrollY = window.pageYOffset;
+  let scrollY = window.scrollY;
 
   // Now we loop through sections to get height, top and ID values for each
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 50;f
+    const sectionTop = current.offsetTop - 50;
     const sectionId = current.getAttribute("id");
 
     /*
