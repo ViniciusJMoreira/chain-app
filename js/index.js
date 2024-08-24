@@ -6,7 +6,8 @@ const serviceSection = document.querySelector("#services");
 const servicesCard = document.querySelector(".section__services-card");
 const reviewsPosts= document.querySelector(".section__reviews-posts");
 
-// NAV FUNCTIONS
+//HEEADER
+// NAV HEADER
 const navHighlighter = function () {
   // Get current scroll position
   let scrollY = window.pageYOffset;
@@ -14,7 +15,7 @@ const navHighlighter = function () {
   // Now we loop through sections to get height, top and ID values for each
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 50;
+    const sectionTop = current.offsetTop - 50;f
     const sectionId = current.getAttribute("id");
 
     /*
@@ -32,15 +33,8 @@ const navHighlighter = function () {
     // }
   });
 };
-const stickNav = function (entries) {
-  const [entry] = entries;
-  if (entry.isIntersecting) nav.classList.add("sticky");
-  if (!entry.isIntersecting && entry.boundingClientRect.top > 0)
-    nav.classList.remove("sticky");
-    document.querySelector(".nav__link .active").classList.remove("active");
-    document.querySelector(".nav__link a[href*='#header']").classList.add("active");
-};
-// NAV HEADER
+window.addEventListener("scroll", navHighlighter);
+
 nav.addEventListener("click", function(e) {
   if(e.target.closest(".nav__menu-hamburger")) {
     if(nav.classList.contains("menu__hidden-hamburger")) {
@@ -54,13 +48,24 @@ nav.addEventListener("click", function(e) {
   if(e.target.closest(".nav__link")) {
     document.querySelector(".nav__link .active").classList.remove("active");
     e.target.classList.add("active");
+    if(nav.classList.contains("menu__hidden-hamburger")) {
+      nav.classList.remove("menu__hidden-hamburger");
+      navMenu.classList.add("nav__hidden-menu");
+    }
   }
 })
-
+const stickNav = function (entries) {
+  const [entry] = entries;
+  if (entry.isIntersecting) nav.classList.add("sticky");
+  if (!entry.isIntersecting && entry.boundingClientRect.top > 0)
+    nav.classList.remove("sticky");
+  document.querySelector(".nav__link .active").classList.remove("active");
+  document
+    .querySelector(".nav__link a[href*='#header']")
+    .classList.add("active");
+};
 const navObserver = new IntersectionObserver(stickNav, {root: null,threshold:0, rootMargin: `-${nav.clientHeight}px`})
 navObserver.observe(serviceSection);
-
-window.addEventListener("scroll", navHighlighter);
 
 // SECTION SERVICES
 const servicesCardInHover = function(e) {
