@@ -16,7 +16,6 @@ const navHighlighter = function () {
     const sectionHeight = current.offsetHeight;
     const sectionTop = current.offsetTop - 50;
     const sectionId = current.getAttribute("id");
-    console.log(sectionId);
 
     /*
     - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
@@ -43,12 +42,12 @@ const stickNav = function (entries) {
 };
 // NAV HEADER
 nav.addEventListener("click", function(e) {
-  if(e.target.classList.contains("nav__menu-mobile") || e.target.closest(".nav__menu-mobile")) {
-    if(nav.classList.contains("nav__mobile")) {
-      nav.classList.remove("nav__mobile");
+  if(e.target.closest(".nav__menu-hamburger")) {
+    if(nav.classList.contains("menu__hidden-hamburger")) {
+      nav.classList.remove("menu__hidden-hamburger");
       navMenu.classList.add("nav__hidden-menu");
     }else {
-      nav.classList.add("nav__mobile");
+      nav.classList.add("menu__hidden-hamburger");
       navMenu.classList.remove("nav__hidden-menu");
     }
   };
@@ -58,7 +57,7 @@ nav.addEventListener("click", function(e) {
   }
 })
 
-const navObserver = new IntersectionObserver(stickNav, {root: null,threshold:0.08, rootMargin: `-${nav.clientHeight}px`})
+const navObserver = new IntersectionObserver(stickNav, {root: null,threshold:0, rootMargin: `-${nav.clientHeight}px`})
 navObserver.observe(serviceSection);
 
 window.addEventListener("scroll", navHighlighter);

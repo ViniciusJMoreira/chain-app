@@ -105,14 +105,18 @@
   }
   .nav__menu {
     position: relative;
+    width: auto;
+    top: 0;
+    box-shadow: none;
+    padding-block: 0;
     flex-direction: row;
     margin-left: auto;
-    padding-block: 0;
-    width: auto;
-    transform: translate(0,0);
+  }
+  .nav__hidden-menu {
+    transform: scaleY(1);
     opacity: 1;
   }
-  .nav__menu-mobile {
+  .nav__menu-hamburger {
     display: none;
   }
   .header__content {
