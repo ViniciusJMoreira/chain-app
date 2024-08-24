@@ -51,9 +51,11 @@ const stickNav = function (entries) {
   if (entry.isIntersecting) nav.classList.add("sticky");
   if (!entry.isIntersecting && entry.boundingClientRect.top > 0) nav.classList.remove("sticky");
 };
-const navObserver = new IntersectionObserver(stickNav, {root: null,threshold:0, rootMargin: `-${nav.clientHeight}px`})
+const navHeight = nav.getBoundingClientRect().height;
+const navObserver = new IntersectionObserver(stickNav, {root: null,threshold:0, rootMargin: `-${navHeight}px`})
 navObserver.observe(serviceSection);
 
+// SECTION
 // SECTION SERVICES
 const servicesCardInHover = function(e) {
   const currentCard = e.target.closest(".services__card");
