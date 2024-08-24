@@ -8,27 +8,24 @@ const reviewsPosts= document.querySelector(".section__reviews-posts");
 
 //HEEADER
 // NAV HEADER
-const navHighlighter = function () {
-  // Get current scroll position
-  let scrollY = window.scrollY;
+// Função callback que será chamada quando uma seção entra ou sai da visualização
+const observerCallback = (entries) => {
+  entries.forEach(entry => {
+    const sectionId = entry.target.getAttribute("id");
 
-  // Now we loop through sections to get height, top and ID values for each
-  sections.forEach((current) => {
-    const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 50;
-    const sectionId = current.getAttribute("id");
-
-    /*
-    - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
-    - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
-    */
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document.querySelector(".nav__link .active").classList.remove("active");
+    if (entry.isIntersecting) {
+      // Se a seção está visível, adiciona a classe 'active' ao link correspondente
+      document.querySelector(".nav__link .active")?.classList.remove("active");
       document.querySelector(".nav__link a[href*=" + sectionId + "]").classList.add("active");
     }
   });
 };
-window.addEventListener("scroll", navHighlighter);
+
+const observer = new IntersectionObserver(observerCallback, {root: null,threshold: 0.5});
+// Observa cada seção
+sections.forEach(section => {
+  observer.observe(section);
+});
 
 nav.addEventListener("click", function(e) {
   if(e.target.closest(".nav__menu-hamburger")) {
