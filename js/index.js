@@ -26,11 +26,6 @@ const navHighlighter = function () {
       document.querySelector(".nav__link .active").classList.remove("active");
       document.querySelector(".nav__link a[href*=" + sectionId + "]").classList.add("active");
     }
-    // } else {
-    //   document
-    //     .querySelector(".nav__link a[href*=" + sectionId + "]")
-    //     .classList.remove("active");
-    // }
   });
 };
 window.addEventListener("scroll", navHighlighter);
@@ -57,12 +52,7 @@ nav.addEventListener("click", function(e) {
 const stickNav = function (entries) {
   const [entry] = entries;
   if (entry.isIntersecting) nav.classList.add("sticky");
-  if (!entry.isIntersecting && entry.boundingClientRect.top > 0)
-    nav.classList.remove("sticky");
-  document.querySelector(".nav__link .active").classList.remove("active");
-  document
-    .querySelector(".nav__link a[href*='#header']")
-    .classList.add("active");
+  if (!entry.isIntersecting && entry.boundingClientRect.top > 0) nav.classList.remove("sticky");
 };
 const navObserver = new IntersectionObserver(stickNav, {root: null,threshold:0, rootMargin: `-${nav.clientHeight}px`})
 navObserver.observe(serviceSection);
