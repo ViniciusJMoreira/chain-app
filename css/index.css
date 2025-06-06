@@ -84,7 +84,7 @@ a {
 }
 .header__nav.sticky {
   width: 100%;
-  position: fixed;
+  position: sticky;
 }
 .header__nav-content {
   display: flex;
